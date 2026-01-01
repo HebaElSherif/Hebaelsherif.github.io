@@ -48,6 +48,7 @@ onAuthStateChanged(auth, user => {
     window.location.href = "login.html";
   }
 });
+
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('keydown', function(e) {
@@ -55,3 +56,12 @@ document.addEventListener('keydown', function(e) {
     e.preventDefault();
   }
 });
+
+// سلة المشتريات
+let cart = [];
+
+window.addToCart = function(courseName, price) {
+    cart.push({ name: courseName, price: price });
+    alert(`${courseName} تم إضافته إلى السلة!`);
+    console.log(cart);
+};

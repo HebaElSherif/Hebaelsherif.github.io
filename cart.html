@@ -1,1 +1,19 @@
-<!DOCTYPE html><html lang='ar'><head><meta charset='UTF-8'><title>Cart</title></head><body><h1>السلة</h1></body></html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سلة المشتريات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cart-content">
+        <h2>سلة المشتريات</h2>
+        <div id="cart-items"></div>
+        <h3 id="total-price">الإجمالي: 0 جنيه</h3>
+        <button onclick="checkout()">الدفع الآن</button>
+        <button onclick="window.location.href='dashboard.html'">العودة للوحة التحكم</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

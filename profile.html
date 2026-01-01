@@ -1,1 +1,26 @@
-<!DOCTYPE html><html lang='ar'><head><meta charset='UTF-8'><title>Profile</title></head><body><h1>حسابي الشخصي</h1></body></html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>حسابي - Hebaa ElSherif Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-content">
+        <h2>مرحبًا، <span id="user-name">المستخدم</span></h2>
+        <p>إيميلك: <span id="user-email">example@gmail.com</span></p>
+
+        <h3>تعديل الحساب</h3>
+        <input type="text" id="update-name" placeholder="تعديل الاسم">
+        <input type="password" id="update-password" placeholder="تعديل كلمة المرور">
+        <button onclick="updateProfile()">تحديث الحساب</button>
+
+        <h3>الكورسات المشتراة</h3>
+        <div id="purchased-courses" class="purchased-courses"></div>
+
+        <button onclick="logout()">تسجيل الخروج</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

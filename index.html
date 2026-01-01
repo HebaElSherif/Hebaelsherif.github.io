@@ -1,1 +1,52 @@
-<!DOCTYPE html><html lang='ar'><head><meta charset='UTF-8'><title>Home</title></head><body><h1>Hebaa Academy - الصفحة الرئيسية</h1></body></html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Hebaa ElSherif Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="index-header">
+        <div class="header-content">
+            <img src="brand-logo.png" alt="Hebaa ElSherif Academy" class="brand-logo">
+            <h1>Hebaa ElSherif Academy</h1>
+            <p>تعلم بطريقة احترافية، واكتشف كورسات فريدة تناسب طموحك</p>
+            <a href="login.html">
+                <button class="btn-primary">تسجيل الدخول</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>من نحن</h2>
+        <p>
+            Hebaa ElSherif Academy هو مكانك لتعلم أفضل الكورسات الاحترافية
+            في مجالات مختلفة. هدفنا تطوير مهاراتك بطريقة سهلة وممتعة.
+        </p>
+        <img src="academy-image.jpg" alt="صورة الأكاديمية" class="about-image">
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <h2>كورساتنا</h2>
+        <div class="courses-cards">
+            <div class="course-card">
+                <h3>كورس التصميم الإحترافي</h3>
+                <p>تعلم التصميم من الصفر حتى الاحتراف</p>
+                <button onclick="addToCart('كورس التصميم الإحترافي', 100)">أضف إلى السلة - 100 جنيه</button>
+                <label><input type="checkbox" class="progress-box"> متابع</label>
+            </div>
+            <div class="course-card">
+                <h3>كورس تطوير الويب</h3>
+                <p>تعلم HTML, CSS, JS وتطوير موقع كامل</p>
+                <button onclick="addToCart('كورس تطوير الويب', 150)">أضف إلى السلة - 150 جنيه</button>
+                <label><input type="checkbox" class="progress-box"> متابع</label>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

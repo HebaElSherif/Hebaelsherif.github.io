@@ -48,3 +48,10 @@ onAuthStateChanged(auth, user => {
     window.location.href = "login.html";
   }
 });
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+    e.preventDefault();
+  }
+});

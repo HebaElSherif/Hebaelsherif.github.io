@@ -1,0 +1,232 @@
+/* ===== CSS عام لكل الموقع ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111; /* أسود خلفية عامة */
+    color: #fff;
+}
+
+/* ================== الصفحة الرئيسية ================== */
+.index-header {
+    height: 100vh;
+    background: linear-gradient(135deg, #000, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.index-header .header-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ffd700; /* ذهبي */
+    text-shadow: 1px 1px 5px #000;
+    animation: fadeInDown 1.2s ease;
+}
+
+.index-header .header-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+    animation: fadeInUp 1.2s ease;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    background: transparent;
+    color: #ffd700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ffd700;
+    color: #111;
+    transform: scale(1.1);
+}
+
+/* Features Section */
+.index-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1000px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #222;
+    border-radius: 15px;
+    padding: 25px 20px;
+    flex: 1 1 250px;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* ===== Login ===== */
+.login-content {
+    background: linear-gradient(145deg, #000, #222);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+    text-align: center;
+    width: 400px;
+    margin: 100px auto;
+    color: #fff;
+    animation: fadeIn 1s ease;
+}
+
+.login-content h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #ffd700;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-content input::placeholder {
+    color: #aaa;
+}
+
+.login-content button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffd700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-content button:hover {
+    background: #ffd700;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* ===== Dashboard ===== */
+.dashboard-content {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #111;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1s ease;
+}
+
+.dashboard-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.dashboard-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Dashboard cards */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background: #222;
+    color: #ffd700;
+    padding: 25px 20px;
+    border-radius: 15px;
+    flex: 1 1 250px;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5);
+}
+
+.dashboard-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.dashboard-content button {
+    padding: 12px 30px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffd700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dashboard-content button:hover {
+    background: #ffd700;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+    0% {opacity: 0; transform: translateY(-50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

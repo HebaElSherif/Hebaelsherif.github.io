@@ -7,19 +7,52 @@ body {
 
 /* ----- Brand & About ----- */
 .brand-logo {
-    width: 120px; border-radius: 50%; margin-bottom: 15px;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
     border: 2px solid #00b3ff;
 }
 
 .index-header {
-    height: 100vh; background: linear-gradient(135deg,#000,#222);
-    display: flex; justify-content: center; align-items: center; text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.index-header .header-content h1 { font-size:50px;margin-bottom:20px;color:#ed25ff;text-shadow:1px 1px 5px #000; animation:fadeInDown 1.2s ease;}
-.index-header .header-content p { font-size:20px;margin-bottom:30px;color:#ccc;animation:fadeInUp 1.2s ease;}
-.btn-primary { padding:15px 40px;font-size:18px;border:2px solid #00b3ff;border-radius:12px;background:transparent;color:#ed25ff;cursor:pointer;transition:.3s;}
-.btn-primary:hover { background:#00b3ff;color:#ed25ff;transform:scale(1.1);}
+.index-header .header-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ed25ff;
+    text-shadow: 1px 1px 5px #000;
+    animation: fadeInDown 1.2s ease;
+}
+
+.index-header .header-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+    animation: fadeInUp 1.2s ease;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: 2px solid #00b3ff;
+    border-radius: 12px;
+    background: transparent;
+    color: #ed25ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #00b3ff;
+    color: #ed25ff;
+    transform: scale(1.1);
+}
 
 /* Sections */
 .courses-section,.about-section,.login-content,.dashboard-content,.profile-content,.cart-content{
@@ -45,4 +78,5 @@ button:hover { background:#ffd700; color:#111; transform:scale(1.05); }
 /* Animations */
 @keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
 @keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
+
 

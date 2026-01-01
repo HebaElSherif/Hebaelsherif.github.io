@@ -55,8 +55,61 @@ body {
     color: #ed25ff;
     transform: scale(1.1);
 }
+/.login-content
+/* ===== Login ===== */
+.login-content {
+    background: linear-gradient(145deg, #000, #222);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(218, 218, 218, 0.3);
+    text-align: center;
+    width: 400px;
+    margin: 100px auto;
+    color: #fff;
+    animation: fadeIn 1s ease;
+}
 
-/* Features, Courses, Login, Dashboard, Profile, Cart */
+.login-content h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #ed25ff;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-content input::placeholder {
+    color: #aaa;
+}
+
+.login-content button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: 2px solid #00b3ff;
+    border-radius: 8px;
+    background: transparent;
+    color: #ed25ff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-content button:hover {
+    background: #00b3ff;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* Features, Courses, Dashboard, Profile, Cart */
 .courses-section, .about-section, .login-content, .dashboard-content, .profile-content, .cart-content {
     max-width: 1000px;
     margin: 50px auto;

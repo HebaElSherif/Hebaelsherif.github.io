@@ -55,7 +55,7 @@ body {
     color: #ed25ff;
     transform: scale(1.1);
 }
-/.login-content
+
 /* ===== Login ===== */
 .login-content {
     background: linear-gradient(145deg, #000, #222);
@@ -163,3 +163,4 @@ button:hover {
 @keyframes fadeInDown { 0% {opacity: 0; transform: translateY(-50px);} 100% {opacity:1; transform: translateY(0);} }
 @keyframes fadeInUp { 0% {opacity: 0; transform: translateY(50px);} 100% {opacity:1; transform: translateY(0);} }
 @keyframes fadeIn { 0% {opacity:0;} 100% {opacity:1;} }
+

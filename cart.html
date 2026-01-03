@@ -1,19 +1,95 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>سلة المشتريات</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سلة المشتريات | Heba ElSherif Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-    <div class="cart-content">
-        <h2>سلة المشتريات</h2>
-        <div id="cart-items"></div>
-        <h3 id="total-price">الإجمالي: 0 جنيه</h3>
-        <button onclick="checkout()">الدفع الآن</button>
-        <button onclick="window.location.href='dashboard.html'">العودة للوحة التحكم</button>
+<body class="bg">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
+        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+      </a>
+      <nav class="menu">
+        <a class="" href="courses.html">الكورسات</a>
+        <a class="" href="books.html">الكتب</a>
+        <a class="" href="webinars.html">الويبينار</a>
+        <a class="" href="blog.html">المدونة</a>
+        <a class="" href="contact.html">تواصل</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
+        <span class="chip" id="userChip" style="display:none"></span>
+        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
+        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container section">
+    <div class="section-head">
+      <h1 class="h1">سلة المشتريات</h1>
+      <p class="muted">راجع طلبك قبل الدفع.</p>
     </div>
 
-    <script type="module" src="script.js"></script>
+    <div class="grid" style="grid-template-columns: 1.4fr .6fr; align-items:start">
+      <div class="card">
+        <div id="cartItems"></div>
+        <div class="row" style="justify-content:space-between; margin-top:14px">
+          <button class="btn" id="clearCartBtn">تفريغ السلة</button>
+          <a class="btn" href="courses.html">إضافة منتجات أخرى</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>ملخص الطلب</h3>
+        <p class="muted">الإجمالي محسوب من الأسعار داخل catalog.json</p>
+
+        <div class="line-row">
+          <span class="muted">عدد العناصر</span>
+          <strong id="itemsTotal">0</strong>
+        </div>
+        <div class="line-row">
+          <span class="muted">الإجمالي</span>
+          <strong><span id="priceTotal">0</span> جنيه</strong>
+        </div>
+
+        <div class="coupon">
+          <input class="input" id="couponCode" placeholder="كوبون (مثال: HEB10)" />
+          <button class="btn" type="button" id="applyCouponBtn">تطبيق</button>
+        </div>
+        <p class="muted" id="couponInfo" style="font-size:12px;margin-top:8px"></p>
+
+        <div style="margin-top:14px; display:grid; gap:10px">
+          <button class="btn primary" id="checkoutBtn">إتمام الشراء</button>
+          <p class="muted" style="font-size:12px">
+            * الدفع سيتم عبر Payment Link. في وضع Static ستظهر روابط دفع لكل عنصر في صفحة إتمام الشراء.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة •
+        <a href="privacy.html">الخصوصية</a> •
+        <a href="terms.html">الشروط</a> •
+        <a href="refund.html">الاسترجاع</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

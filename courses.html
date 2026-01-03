@@ -7,20 +7,22 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
+
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <div class="logo"></div>
+         <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
         <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
       </a>
-
       <nav class="menu">
         <a class="active" href="courses.html">الكورسات</a>
-        <a href="books.html">الكتب</a>
-        <a href="webinars.html">الويبينار</a>
+        <a class="" href="books.html">الكتب</a>
+        <a class="" href="webinars.html">الويبينار</a>
+        <a class="" href="blog.html">المدونة</a>
+        <a class="" href="contact.html">تواصل</a>
       </nav>
-
       <div class="nav-actions">
+        <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
         <span class="chip" id="userChip" style="display:none"></span>
         <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
         <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
@@ -28,33 +30,37 @@
     </div>
   </header>
 
+
   <main class="container section">
     <div class="section-head">
       <h1 class="h1">الكورسات</h1>
-      <p class="muted">ابحث وفلتر — التغييرات تظهر فورًا.</p>
+      <p class="muted">ابحث وفلتر — النتائج تتحدث فورًا.</p>
     </div>
 
     <div class="toolbar">
-      <input id="search" class="input" placeholder="ابحث عن كورس..." />
+      <input id="search" class="input" placeholder="ابحث..." />
       <select id="category" class="input">
         <option value="">كل التصنيفات</option>
       </select>
-      <select id="level" class="input">
-        <option value="">كل المستويات</option>
-        <option value="مبتدئ">مبتدئ</option>
-        <option value="متوسط">متوسط</option>
-        <option value="متقدم">متقدم</option>
-      </select>
+      <select id='level' class='input'><option value=''>كل المستويات</option><option value='مبتدئ'>مبتدئ</option><option value='متوسط'>متوسط</option><option value='متقدم'>متقدم</option></select>
     </div>
 
     <div class="grid" id="grid"></div>
   </main>
 
+  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
+
+
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Heba ElSherif Academy</p>
+      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة •
+        <a href="privacy.html">الخصوصية</a> •
+        <a href="terms.html">الشروط</a> •
+        <a href="refund.html">الاسترجاع</a>
+      </p>
     </div>
   </footer>
+
 
   <script type="module" src="js/firebase.js"></script>
   <script type="module" src="js/main.js"></script>

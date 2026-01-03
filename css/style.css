@@ -29,29 +29,28 @@ body.bg{min-height:100vh;background:var(--bg);color:var(--black);line-height:1.8
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
 .logo-img{
-  width: 62px;
-  height: 62px;
-  border-radius: 999px;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
   border: 1px solid rgba(0,0,0,.06);
   background: #fff;
 }
-
 .brand strong{font-size:15px}
 .brand .small{font-size:12px;color:var(--muted)}
-.menu{display:flex;align-items:center;gap:18px}
-.menu a{color:var(--black);text-decoration:none;font-weight:700;font-size:14px;opacity:.9}
+.menu{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.menu a{color:var(--black);text-decoration:none;font-weight:900;font-size:14px;opacity:.9}
 .menu a:hover{opacity:.7}
 .menu a.active{opacity:1;border-bottom:2px solid rgba(154,208,236,.9);padding-bottom:4px}
-.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
 .chip{
   display:inline-flex;align-items:center;gap:8px;
   padding:8px 12px;border-radius:999px;
   background:rgba(255,255,255,.9);
   border:1px solid var(--border);
-  font-size:12px;font-weight:800;
+  font-size:12px;font-weight:900;
 }
 
 .badge{
@@ -102,7 +101,7 @@ body.bg{min-height:100vh;background:var(--bg);color:var(--black);line-height:1.8
 .stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
 .stat{background:rgba(255,255,255,.85);border:1px solid var(--border);border-radius:18px;padding:10px 14px;display:flex;gap:10px;align-items:baseline}
 .stat strong{font-size:18px}
-.stat span{color:var(--muted);font-size:13px;font-weight:800}
+.stat span{color:var(--muted);font-size:13px;font-weight:900}
 
 .hero-card{
   background:rgba(255,255,255,.88);
@@ -151,7 +150,7 @@ body.bg{min-height:100vh;background:var(--bg);color:var(--black);line-height:1.8
   border-top:1px solid var(--border);
   padding:24px 0;
 }
-.footer-inner{display:flex;justify-content:center;color:var(--muted);font-weight:800;font-size:13px}
+.footer-inner{display:flex;justify-content:center;color:var(--muted);font-weight:900;font-size:13px}
 
 .auth-card{
   width:min(560px,92vw);
@@ -174,8 +173,8 @@ body.bg{min-height:100vh;background:var(--bg);color:var(--black);line-height:1.8
 }
 .auth-head{display:flex;gap:12px;align-items:center;margin-bottom:16px}
 .form{display:grid;gap:10px}
-label{font-size:13px;color:rgba(11,11,15,.75);font-weight:800}
-.msg{margin-top:10px;font-size:13px;color:#b00020;font-weight:800}
+label{font-size:13px;color:rgba(11,11,15,.75);font-weight:900}
+.msg{margin-top:10px;font-size:13px;color:#b00020;font-weight:900}
 .msg.ok{color:#0a7a2f}
 
 @media(max-width:900px){
@@ -183,3 +182,76 @@ label{font-size:13px;color:rgba(11,11,15,.75);font-weight:800}
   .menu{display:none}
 }
 
+/* WhatsApp floating */
+.whatsapp-fab{
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.10);
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 900;
+  box-shadow: 0 20px 45px rgba(0,0,0,.10);
+}
+.whatsapp-fab:hover{opacity:.93; transform: translateY(-1px); transition:.2s}
+
+/* Watermark */
+.watermark{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .12;
+  background-repeat: repeat;
+  background-size: 360px 220px;
+  transform: rotate(-18deg);
+  mix-blend-mode: multiply;
+}
+
+/* Cart badge */
+.cart-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:22px;height:22px;padding:0 7px;margin-right:8px;
+  border-radius:999px;background: rgba(247,198,208,.9);
+  border: 1px solid rgba(0,0,0,.08);
+  font-size:12px;font-weight:900;
+}
+
+.cart-row{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:10px;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.cart-row:last-child{border-bottom:none}
+.qty{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.qty button{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,.12);
+  background:#fff;
+  cursor:pointer;
+  font-weight:900;
+}
+.qty span{min-width:22px; text-align:center; font-weight:900}
+
+.coupon{
+  display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;
+}
+.coupon .input{flex:1; min-width:220px}
+.line-row{display:flex; justify-content:space-between; gap:12px; margin-top:10px;}
+.hr{height:1px;background:rgba(0,0,0,.06);margin:14px 0}

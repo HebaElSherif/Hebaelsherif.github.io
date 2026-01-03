@@ -10,19 +10,29 @@
       "duration": "3 ساعات",
       "price": 299,
       "featured": true,
-      "paymentLink": ""
+      "paymentLink": "",
+      "bullets": [
+        "أساسيات من الصفر",
+        "تمارين عملية",
+        "ملفات مساعدة"
+      ]
     },
     {
       "id": "course-2",
       "type": "course",
       "title": "كورس احترافي 2",
-      "description": "وصف مختصر للكورس ونتيجته.",
+      "description": "مستوى أعلى مع تطبيقات عملية.",
       "category": "عناية",
       "level": "متوسط",
       "duration": "5 ساعات",
       "price": 399,
       "featured": false,
-      "paymentLink": ""
+      "paymentLink": "",
+      "bullets": [
+        "تقنيات متقدمة",
+        "حالات واقعية",
+        "نصائح احترافية"
+      ]
     },
     {
       "id": "book-1",
@@ -32,7 +42,12 @@
       "category": "كتب",
       "price": 149,
       "featured": false,
-      "paymentLink": ""
+      "paymentLink": "",
+      "bullets": [
+        "ملخصات مركزة",
+        "أمثلة عملية",
+        "مراجع إضافية"
+      ]
     },
     {
       "id": "webinar-1",
@@ -42,7 +57,12 @@
       "category": "ويبينار",
       "price": 99,
       "featured": false,
-      "paymentLink": ""
+      "paymentLink": "",
+      "bullets": [
+        "جلسة مباشرة",
+        "Q&A",
+        "ملخص بعد الجلسة"
+      ]
     }
   ]
 }

@@ -4,26 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Heba ElSherif Academy</title>
+  <meta name="description" content="كورسات وكتب وويبينار — Heba ElSherif Academy" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
+
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
-        <div>
-          <strong>Heba ElSherif</strong>
-          <div class="small">Academy</div>
-        </div>
+         <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
+        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
       </a>
-
       <nav class="menu">
-        <a href="courses.html">الكورسات</a>
-        <a href="books.html">الكتب</a>
-        <a href="webinars.html">الويبينار</a>
+        <a class="" href="courses.html">الكورسات</a>
+        <a class="" href="books.html">الكتب</a>
+        <a class="" href="webinars.html">الويبينار</a>
+        <a class="" href="blog.html">المدونة</a>
+        <a class="" href="contact.html">تواصل</a>
       </nav>
-
       <div class="nav-actions">
+        <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
         <span class="chip" id="userChip" style="display:none"></span>
         <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
         <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
@@ -31,14 +31,13 @@
     </div>
   </header>
 
+
   <section class="hero container">
     <div class="hero-text">
       <span class="badge">منصة تعليمية عربية — كورسات وكتب وويبينار</span>
       <h1>اتعلّم باحتراف<br /><span class="accent">من مكان واحد</span></h1>
-      <p>
-        تجربة فاخرة وخفيفة وسريعة: بحث وفلترة، صفحات منظمة،
-        وتسجيل دخول Firebase.
-      </p>
+      <p>تجربة فاخرة وخفيفة وسريعة: بحث وفلترة، صفحات تفاصيل، وسلة مشتريات، وتسجيل دخول Firebase.</p>
+
       <div class="actions">
         <a href="courses.html" class="btn primary">تصفّح الكورسات</a>
         <a href="books.html" class="btn">تصفّح الكتب</a>
@@ -53,37 +52,37 @@
 
     <div class="hero-card">
       <h3>الأكثر شيوعًا</h3>
-      <p class="muted">سيظهر هنا أعلى منتج تلقائيًا من ملف البيانات.</p>
-      <div class="featured" id="featuredBox"></div>
+      <p class="muted">سيظهر هنا منتج مميز تلقائيًا من ملف البيانات.</p>
+      <div id="featuredBox"></div>
     </div>
   </section>
 
   <section class="container section">
     <div class="section-head">
-      <h2>اختيارات سريعة</h2>
-      <p class="muted">روابط مباشرة لأهم الأقسام.</p>
+      <h2>روابط سريعة</h2>
+      <p class="muted">تصفح الأقسام الأساسية بسهولة.</p>
     </div>
     <div class="grid">
-      <a class="card card-link" href="courses.html">
-        <h3>الكورسات</h3>
-        <p>بحث + فلترة + صفحات تفاصيل.</p>
-      </a>
-      <a class="card card-link" href="books.html">
-        <h3>الكتب</h3>
-        <p>كتب رقمية منظمة وعرض فاخر.</p>
-      </a>
-      <a class="card card-link" href="webinars.html">
-        <h3>الويبينار</h3>
-        <p>مواعيد + زر تسجيل سريع.</p>
-      </a>
+      <a class="card card-link" href="courses.html"><h3>الكورسات</h3><p>بحث + فلترة + صفحات تفاصيل.</p></a>
+      <a class="card card-link" href="books.html"><h3>الكتب</h3><p>كتب رقمية منظمة وعرض فاخر.</p></a>
+      <a class="card card-link" href="webinars.html"><h3>الويبينار</h3><p>مواعيد + زر تسجيل سريع.</p></a>
+      <a class="card card-link" href="blog.html"><h3>المدونة</h3><p>مقالات تساعدك على الاختيار والتعلم.</p></a>
     </div>
   </section>
 
+  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
+
+
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</p>
+      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة •
+        <a href="privacy.html">الخصوصية</a> •
+        <a href="terms.html">الشروط</a> •
+        <a href="refund.html">الاسترجاع</a>
+      </p>
     </div>
   </footer>
+
 
   <script type="module" src="js/firebase.js"></script>
   <script type="module" src="js/main.js"></script>

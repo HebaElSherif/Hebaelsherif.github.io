@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>الويبينار | Heba ElSherif Academy</title>
+  <title>تفاصيل المنتج | Heba ElSherif Academy</title>
+  <meta name="description" content="تفاصيل كورس/كتاب داخل Heba ElSherif Academy" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
@@ -17,7 +18,7 @@
       <nav class="menu">
         <a class="" href="courses.html">الكورسات</a>
         <a class="" href="books.html">الكتب</a>
-        <a class="active" href="webinars.html">الويبينار</a>
+        <a class="" href="webinars.html">الويبينار</a>
         <a class="" href="blog.html">المدونة</a>
         <a class="" href="contact.html">تواصل</a>
       </nav>
@@ -32,20 +33,41 @@
 
 
   <main class="container section">
-    <div class="section-head">
-      <h1 class="h1">الويبينار</h1>
-      <p class="muted">ابحث وفلتر — النتائج تتحدث فورًا.</p>
-    </div>
+    <div class="grid" style="grid-template-columns: 1.2fr .8fr; align-items:start">
+      <div class="card">
+        <h1 class="h1" id="title">...</h1>
+        <p class="muted" id="desc">...</p>
+        <div class="kv" id="tags"></div>
 
-    <div class="toolbar">
-      <input id="search" class="input" placeholder="ابحث..." />
-      <select id="category" class="input">
-        <option value="">كل التصنيفات</option>
-      </select>
-      <div></div>
-    </div>
+        <div class="hr"></div>
 
-    <div class="grid" id="grid"></div>
+        <h3>ماذا ستتعلم؟</h3>
+        <ul id="bullets" style="margin-top:10px; padding-right:18px"></ul>
+
+        <div class="hr"></div>
+
+        <h3>الأسئلة الشائعة</h3>
+        <div id="faqBox" style="margin-top:10px; display:grid; gap:10px"></div>
+      </div>
+
+      <aside class="card">
+        <h3>ملخص</h3>
+        <div class="line-row"><span class="muted">السعر</span><strong><span id="price">0</span> جنيه</strong></div>
+        <div class="line-row"><span class="muted">التصنيف</span><strong id="cat">-</strong></div>
+        <div class="line-row"><span class="muted">المستوى</span><strong id="lvl">-</strong></div>
+
+        <div class="hr"></div>
+
+        <div class="row">
+          <button class="btn primary" id="addBtn">أضف للسلة</button>
+          <a class="btn" href="cart.html">عرض السلة</a>
+        </div>
+
+        <p class="muted" style="font-size:12px; margin-top:10px">
+          الدفع يتم من صفحة السلة عبر Payment Link.
+        </p>
+      </aside>
+    </div>
   </main>
 
   <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>

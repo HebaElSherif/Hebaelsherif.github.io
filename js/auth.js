@@ -16,7 +16,6 @@ function setMsg(text, ok = false) {
 }
 
 function getEmail() {
-  // trim + تحويل لأي حروف كبيرة لصغيرة + إزالة مسافات داخلية
   return (emailEl.value || "").trim().toLowerCase();
 }
 
@@ -25,7 +24,6 @@ function getPassword() {
 }
 
 function validateEmail(email) {
-  // تحقق بسيط كفاية لـ Firebase
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
@@ -37,6 +35,12 @@ function friendlyError(err) {
   if (code === "auth/email-already-in-use") return "الإيميل ده مسجل بالفعل. جرّب تسجيل الدخول.";
   if (code === "auth/invalid-credential") return "بيانات الدخول غير صحيحة.";
   return err?.message || "حصل خطأ غير متوقع.";
+}
+
+function goNext() {
+  const redirect = localStorage.getItem("heba_redirect_after_login") || "dashboard.html";
+  localStorage.removeItem("heba_redirect_after_login");
+  window.location.href = redirect;
 }
 
 form.addEventListener("submit", async (e) => {
@@ -58,7 +62,7 @@ form.addEventListener("submit", async (e) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
     setMsg("تم تسجيل الدخول ✅", true);
-    window.location.href = "dashboard.html";
+    goNext();
   } catch (err) {
     setMsg(friendlyError(err));
   }
@@ -81,7 +85,7 @@ signupBtn.addEventListener("click", async () => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
     setMsg("تم إنشاء الحساب ✅", true);
-    window.location.href = "dashboard.html";
+    goNext();
   } catch (err) {
     setMsg(friendlyError(err));
   }

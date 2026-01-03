@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>حسابي | Heba ElSherif Academy</title>
+  <title>تواصل | Heba ElSherif Academy</title>
+  <meta name="description" content="تواصل معنا للاستفسار عن الكورسات والكتب والويبينارات." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
@@ -19,7 +20,7 @@
         <a class="" href="books.html">الكتب</a>
         <a class="" href="webinars.html">الويبينار</a>
         <a class="" href="blog.html">المدونة</a>
-        <a class="" href="contact.html">تواصل</a>
+        <a class="active" href="contact.html">تواصل</a>
       </nav>
       <div class="nav-actions">
         <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
@@ -32,25 +33,40 @@
 
 
   <main class="container section">
-    <div class="section-head">
-      <h1 class="h1">حسابي</h1>
-      <p class="muted">هذه صفحة محمية — يجب تسجيل الدخول.</p>
-    </div>
-
-    <div class="grid">
+    <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:start">
       <div class="card">
-        <h3>بيانات الحساب</h3>
-        <p class="muted" id="who">...</p>
-        <div class="row">
-          <a class="btn" href="courses.html">تصفح الكورسات</a>
-          <a class="btn primary" href="books.html">تصفح الكتب</a>
-          <a class="btn" href="cart.html">السلة</a>
-        </div>
+        <h1 class="h1">تواصل معنا</h1>
+        <p class="muted">أرسل رسالة وسنرد عليك في أقرب وقت.</p>
+
+        <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <label>الاسم</label>
+          <input class="input" name="name" required />
+
+          <label>الإيميل</label>
+          <input class="input" type="email" name="email" required />
+
+          <label>الرسالة</label>
+          <textarea class="input" name="message" rows="5" required></textarea>
+
+          <button class="btn primary" type="submit">إرسال</button>
+          <p class="muted" style="font-size:12px;margin-top:10px">
+            * استبدل YOUR_FORMSPREE_ID أو استخدم واتساب فقط.
+          </p>
+        </form>
       </div>
 
       <div class="card">
-        <h3>معلومة</h3>
-        <p class="muted">الشراء يتم عبر Payment Link. بعد الدفع يمكنك تفريغ السلة من صفحة إتمام الشراء.</p>
+        <h3>واتساب</h3>
+        <p class="muted">تواصل سريع عبر واتساب.</p>
+        <a class="btn dark" id="waBtn" href="#" target="_blank" rel="noopener">فتح واتساب</a>
+
+        <div class="hr"></div>
+        <h3>روابط مهمة</h3>
+        <div class="row">
+          <a class="btn" href="privacy.html">الخصوصية</a>
+          <a class="btn" href="terms.html">الشروط</a>
+          <a class="btn" href="refund.html">الاسترجاع</a>
+        </div>
       </div>
     </div>
   </main>
@@ -70,6 +86,6 @@
 
 
   <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/guard.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

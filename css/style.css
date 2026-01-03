@@ -29,8 +29,8 @@ body.bg{min-height:100vh;background:var(--bg);color:var(--black);line-height:1.8
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
 .logo-img{
-  width: 42px;
-  height: 42px;
+  width: 62px;
+  height: 62px;
   border-radius: 999px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
@@ -182,3 +182,4 @@ label{font-size:13px;color:rgba(11,11,15,.75);font-weight:800}
   .hero{grid-template-columns:1fr;padding-top:60px}
   .menu{display:none}
 }
+

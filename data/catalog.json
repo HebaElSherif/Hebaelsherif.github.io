@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "course-1",
+      "type": "course",
+      "title": "كورس احترافي 1",
+      "description": "وصف مختصر للكورس ونتيجته.",
+      "category": "تجميل",
+      "level": "مبتدئ",
+      "duration": "3 ساعات",
+      "price": 299,
+      "featured": true,
+      "paymentLink": ""
+    },
+    {
+      "id": "course-2",
+      "type": "course",
+      "title": "كورس احترافي 2",
+      "description": "وصف مختصر للكورس ونتيجته.",
+      "category": "عناية",
+      "level": "متوسط",
+      "duration": "5 ساعات",
+      "price": 399,
+      "featured": false,
+      "paymentLink": ""
+    },
+    {
+      "id": "book-1",
+      "type": "book",
+      "title": "كتاب PDF 1",
+      "description": "كتاب رقمي شامل.",
+      "category": "كتب",
+      "price": 149,
+      "featured": false,
+      "paymentLink": ""
+    },
+    {
+      "id": "webinar-1",
+      "type": "webinar",
+      "title": "ويبينار مباشر",
+      "description": "ويبينار + أسئلة وأجوبة.",
+      "category": "ويبينار",
+      "price": 99,
+      "featured": false,
+      "paymentLink": ""
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>حسابي</title>
+  <title>الكتب | Heba ElSherif Academy</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
@@ -13,42 +13,35 @@
         <div class="logo"></div>
         <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
       </a>
+
       <nav class="menu">
         <a href="courses.html">الكورسات</a>
-        <a href="books.html">الكتب</a>
+        <a class="active" href="books.html">الكتب</a>
         <a href="webinars.html">الويبينار</a>
       </nav>
+
       <div class="nav-actions">
         <span class="chip" id="userChip" style="display:none"></span>
-        <button class="btn small dark" id="logoutBtn">خروج</button>
+        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
+        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
       </div>
     </div>
   </header>
 
   <main class="container section">
     <div class="section-head">
-      <h1 class="h1">حسابي</h1>
-      <p class="muted">دي صفحة محمية — لو مش مسجل دخول هترجع تلقائيًا.</p>
+      <h1 class="h1">الكتب</h1>
+      <p class="muted">كتب رقمية — مع زر شراء/تحميل.</p>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>بيانات الحساب</h3>
-        <p class="muted" id="who">...</p>
-        <div class="row">
-          <a class="btn" href="courses.html">تصفح الكورسات</a>
-          <a class="btn primary" href="books.html">تصفح الكتب</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>ملاحظة</h3>
-        <p>
-          في النسخة الـ Static، الشراء يتم عبر Payment Link.
-          بعد الدفع تقدر تفعل الوصول للمحتوى يدويًا (أو لاحقًا نعمل أتمتة).
-        </p>
-      </div>
+    <div class="toolbar">
+      <input id="search" class="input" placeholder="ابحث عن كتاب..." />
+      <select id="category" class="input">
+        <option value="">كل التصنيفات</option>
+      </select>
     </div>
+
+    <div class="grid" id="grid"></div>
   </main>
 
   <footer class="footer">
@@ -58,6 +51,6 @@
   </footer>
 
   <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/guard.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

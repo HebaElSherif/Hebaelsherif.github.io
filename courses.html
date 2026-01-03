@@ -1,25 +1,62 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>الكورسات</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الكورسات | Heba ElSherif Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-    <header>
-        <h1>HebaaElSherifAcademy</h1>
-        <nav>
-            <a href="index.html">الرئيسية</a>
-            <a href="profile.html">حسابي</a>
-            <a href="cart.html">السلة</a>
-        </nav>
-    </header>
+<body class="bg">
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+      </a>
 
-    <section class="courses-section">
-        <h2>جميع الكورسات</h2>
-        <div id="courses-container"></div>
-    </section>
+      <nav class="menu">
+        <a class="active" href="courses.html">الكورسات</a>
+        <a href="books.html">الكتب</a>
+        <a href="webinars.html">الويبينار</a>
+      </nav>
 
-    <script type="module" src="script.js"></script>
+      <div class="nav-actions">
+        <span class="chip" id="userChip" style="display:none"></span>
+        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
+        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h1 class="h1">الكورسات</h1>
+      <p class="muted">ابحث وفلتر — التغييرات تظهر فورًا.</p>
+    </div>
+
+    <div class="toolbar">
+      <input id="search" class="input" placeholder="ابحث عن كورس..." />
+      <select id="category" class="input">
+        <option value="">كل التصنيفات</option>
+      </select>
+      <select id="level" class="input">
+        <option value="">كل المستويات</option>
+        <option value="مبتدئ">مبتدئ</option>
+        <option value="متوسط">متوسط</option>
+        <option value="متقدم">متقدم</option>
+      </select>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Heba ElSherif Academy</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

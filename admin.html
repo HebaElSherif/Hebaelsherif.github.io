@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة الإدارة | Heba ElSherif Academy</title>
+  <meta name="description" content="لوحة إدارة الحجوزات (للأدمن فقط)." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+      </a>
+      <nav class="menu">
+        <a href="booking.html">حجز جلسة</a>
+        <a href="dashboard.html">حسابي</a>
+        <a href="admin.html" class="active">الإدارة</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="chip" id="userChip" style="display:none"></span>
+        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
+        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h1 class="h1">لوحة الإدارة</h1>
+      <p class="muted">عرض وإدارة الحجوزات (تأكيد/إلغاء). هذه الصفحة للأدمن فقط.</p>
+    </div>
+
+    <div id="gate" class="card" style="border-style:dashed">
+      <p class="muted">جاري التحقق من صلاحيات الأدمن...</p>
+    </div>
+
+    <div id="adminUI" style="display:none">
+      <div class="toolbar" style="grid-template-columns:1fr 1fr 1fr">
+        <select id="statusFilter" class="input">
+          <option value="">كل الحالات</option>
+          <option value="pending">pending</option>
+          <option value="confirmed">confirmed</option>
+          <option value="cancelled">cancelled</option>
+        </select>
+        <input id="dateFilter" class="input" type="date" />
+        <input id="q" class="input" placeholder="بحث بالاسم/الهاتف/الإيميل..." />
+      </div>
+
+      <div id="list" class="grid"></div>
+      <p id="msg" class="msg"></p>
+    </div>
+  </main>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

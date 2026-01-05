@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>حسابي | Heba ElSherif Academy</title>
+  <meta name="description" content="لوحة حساب المستخدم: الاسم، الصورة، الاشتراكات، والتقدم." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg">
@@ -11,18 +14,18 @@
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="index.html">
-         <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
+        <div class="logo"></div>
         <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
       </a>
       <nav class="menu">
-        <a class="" href="courses.html">الكورسات</a>
-        <a class="" href="books.html">الكتب</a>
-        <a class="" href="webinars.html">الويبينار</a>
-        <a class="" href="blog.html">المدونة</a>
-        <a class="" href="contact.html">تواصل</a>
+        <a href="booking.html">حجز جلسة</a>
+        <a href="courses.html">الكورسات (قريباً)</a>
+        <a href="books.html">الكتب (قريباً)</a>
+        <a href="dashboard.html" class="active">حسابي</a>
+        <a href="admin.html">الإدارة</a>
+        <a href="contact.html">تواصل</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
         <span class="chip" id="userChip" style="display:none"></span>
         <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
         <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
@@ -30,46 +33,79 @@
     </div>
   </header>
 
-
   <main class="container section">
-    <div class="section-head">
-      <h1 class="h1">حسابي</h1>
-      <p class="muted">هذه صفحة محمية — يجب تسجيل الدخول.</p>
+    <div id="loginGate" class="card" style="display:none;border-style:dashed">
+      <h1 class="h1">لازم تسجل دخول</h1>
+      <p class="muted">علشان تشوف حسابك وبياناتك، سجل دخول الأول.</p>
+      <a class="btn primary" href="login.html" onclick="localStorage.setItem('heba_redirect_after_login','dashboard.html')">تسجيل الدخول</a>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>بيانات الحساب</h3>
-        <p class="muted" id="who">...</p>
-        <div class="row">
-          <a class="btn" href="courses.html">تصفح الكورسات</a>
-          <a class="btn primary" href="books.html">تصفح الكتب</a>
-          <a class="btn" href="cart.html">السلة</a>
-        </div>
+    <div id="dash" style="display:none">
+      <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:start">
+        <section class="card">
+          <h1 class="h1" style="margin-bottom:6px">حسابي</h1>
+          <p class="muted">هنا تقدر تعدّل اسمك وصورتك وتشوف حجوزاتك وتقدمك.</p>
+          <div class="hr"></div>
+
+          <div class="row" style="align-items:center;gap:14px">
+            <img id="uPhoto" alt="User photo" style="width:72px;height:72px;border-radius:22px;border:1px solid rgba(0,0,0,.08);object-fit:cover" />
+            <div style="display:grid;gap:4px">
+              <strong id="uName">—</strong>
+              <span class="muted" id="uEmail">—</span>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="form">
+            <label>اسم المستخدم (Display Name)</label>
+            <input id="displayName" class="input" placeholder="مثال: Heba" />
+
+            <label>رابط الصورة (اختياري)</label>
+            <input id="photoUrl" class="input" placeholder="https://..." />
+
+            <button class="btn primary" type="button" id="saveProfile">حفظ البيانات</button>
+            <p id="msg" class="msg"></p>
+          </div>
+        </section>
+
+        <aside class="card">
+          <h3>اشتراكاتي / حجوزاتي</h3>
+          <p class="muted">حالياً: بنعرض حجوزات الجلسات. لاحقاً سنعرض الكورسات/الكتب عند تفعيلها.</p>
+          <div class="hr"></div>
+          <div id="bookings" class="grid" style="grid-template-columns:1fr"></div>
+        </aside>
       </div>
 
-      <div class="card">
-        <h3>معلومة</h3>
-        <p class="muted">الشراء يتم عبر Payment Link. بعد الدفع يمكنك تفريغ السلة من صفحة إتمام الشراء.</p>
-      </div>
+      <section class="container" style="padding:0;margin-top:18px">
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <div>
+              <h3>التقدم (Progress)</h3>
+              <p class="muted">تقدم تجريبي الآن — وسنربطه بالكورسات عند تفعيلها.</p>
+            </div>
+            
+          </div>
+          <div class="hr"></div>
+          <div id="coursesProgress" class="grid"></div>
+        </div>
+      </section>
     </div>
   </main>
 
   <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
 
-
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة •
-        <a href="privacy.html">الخصوصية</a> •
-        <a href="terms.html">الشروط</a> •
-        <a href="refund.html">الاسترجاع</a>
-      </p>
+      <span>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</span>
+      <span>•</span><a href="privacy.html">الخصوصية</a>
+      <span>•</span><a href="terms.html">الشروط</a>
+      <span>•</span><a href="refund.html">الاسترجاع</a>
     </div>
   </footer>
 
-
   <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/guard.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
 </body>
 </html>

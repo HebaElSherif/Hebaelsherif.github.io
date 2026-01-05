@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حجز جلسة | Heba ElSherif Academy</title>
+  <meta name="description" content="احجز جلسة: ساعة 1200 أو ساعة ونصف 1800. الجمعة إجازة. كوبونات: HEBA1000 / HEBA1500." />
+  <link rel="canonical" href="https://www.hebaelsherifacademy.com/booking.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="حجز جلسة | Heba ElSherif Academy"/>
+  <meta property="og:description" content="احجز جلسة: ساعة 1200 أو ساعة ونصف 1800. الجمعة إجازة. كوبونات: HEBA1000 / HEBA1500."/>
+  <meta property="og:url" content="https://www.hebaelsherifacademy.com/booking.html"/>
+  <meta property="og:site_name" content="Heba ElSherif Academy"/>
+  <meta name="theme-color" content="#9AD0EC"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Heba ElSherif Academy", "url": "https://www.hebaelsherifacademy.com/", "sameAs": []}</script>
+</head>
+<body class="bg">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+      </a>
+      <nav class="menu">
+        <a class="active" href="booking.html">حجز جلسة</a>
+        <a class="" href="courses.html">الكورسات (قريباً)</a>
+        <a class="" href="books.html">الكتب (قريباً)</a>
+        <a href="dashboard.html">حسابي</a>
+        <a href="admin.html">الإدارة</a>
+        <a class="" href="contact.html">تواصل</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="chip" id="userChip" style="display:none"></span>
+        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
+        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container section">
+    <div class="grid" style="grid-template-columns: 1.1fr .9fr; align-items:start">
+      <div class="card">
+        <h1 class="h1">حجز جلسة</h1>
+        <p class="muted">اختار اليوم والوقت. <strong>الجمعة إجازة</strong>. سيتم حفظ طلبك على Firebase.</p>
+
+        <div id="loginHint" class="card" style="display:none; margin-top:12px; border-style:dashed">
+          <p class="muted">ملاحظة: لازم تسجّل دخول قبل إرسال الحجز لتقليل السبام.</p>
+          <a class="btn primary" href="login.html" onclick="localStorage.setItem('heba_redirect_after_login','booking.html')">تسجيل الدخول</a>
+        </div>
+
+        <form id="bookingForm" class="form" style="margin-top:14px">
+          <label>الاسم</label>
+          <input id="name" class="input" required />
+
+          <label>رقم الموبايل</label>
+          <input id="phone" class="input" required placeholder="01xxxxxxxxx" />
+
+          <label>الإيميل</label>
+          <input id="email" class="input" required type="email" placeholder="name@email.com" />
+
+          <label>مدة الجلسة</label>
+          <select id="duration" class="input">
+            <option value="60">ساعة (1200)</option>
+            <option value="90">ساعة ونصف (1800)</option>
+          </select>
+
+          <div class="row" style="gap:10px">
+            <div style="flex:1; min-width:220px">
+              <label>التاريخ</label>
+              <input id="date" class="input" type="date" required />
+              <div class="help">الجمعة غير متاح.</div>
+            </div>
+            <div style="flex:1; min-width:220px">
+              <label>الوقت</label>
+              <select id="time" class="input"></select>
+              <div class="help">من 09:00 إلى 21:00 كل 30 دقيقة.</div>
+            </div>
+          </div>
+
+          <label>كوبون خصم (اختياري)</label>
+          <input id="coupon" class="input" placeholder="HEBA1000 أو HEBA1500" />
+
+          <div class="card" style="border-style:dashed">
+            <div class="row" style="justify-content:space-between; align-items:center">
+              <span class="muted">السعر النهائي</span>
+              <strong><span id="price">1200</span> جنيه</strong>
+            </div>
+            <p class="muted" style="font-size:12px;margin-top:6px">
+              كوبون الساعة: <strong>HEBA1000</strong> • كوبون 90 دقيقة: <strong>HEBA1500</strong>
+            </p>
+          </div>
+
+          <label>ملاحظات (اختياري)</label>
+          <textarea id="note" class="input" rows="4" placeholder="اكتب تفاصيل بسيطة عن طلبك..."></textarea>
+
+          <button class="btn primary" type="submit">إرسال طلب الحجز</button>
+          <p id="msg" class="msg"></p>
+        </form>
+      </div>
+
+      <aside class="card">
+        <h3>معلومات</h3>
+        <p class="muted">بعد إرسال الطلب، سيتم حفظه في Firebase (Firestore) بحالة <strong>Pending</strong>، وسنتواصل معك لتأكيد الموعد.</p>
+        <div class="hr"></div>
+        <h3>السياسة</h3>
+        <p class="muted">يُفضّل الالتزام بالوقت المحدد. في حال الرغبة في تغيير الموعد تواصل معنا.</p>
+        <div class="hr"></div>
+        <a class="btn dark" id="waBtn" href="#" target="_blank" rel="noopener">واتساب للحجز السريع</a>
+      </aside>
+    </div>
+  </main>
+
+  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</span>
+      <span>•</span><a href="privacy.html">الخصوصية</a>
+      <span>•</span><a href="terms.html">الشروط</a>
+      <span>•</span><a href="refund.html">الاسترجاع</a>
+    </div>
+  </footer>
+
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/booking.js"></script>
+</body>
+</html>

@@ -3,37 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heba ElSherif Academy | حجز جلسات + كورسات وكتب قريباً</title>
+  <meta name="description" content="Heba ElSherif Academy — احجز جلسة تدريب/استشارة. الكورسات والكتب قريباً." />
+  <link rel="canonical" href="https://www.hebaelsherifacademy.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Heba ElSherif Academy | حجز جلسات + كورسات وكتب قريباً"/>
+  <meta property="og:description" content="Heba ElSherif Academy — احجز جلسة تدريب/استشارة. الكورسات والكتب قريباً."/>
+  <meta property="og:url" content="https://www.hebaelsherifacademy.com/"/>
+  <meta property="og:site_name" content="Heba ElSherif Academy"/>
+  <meta name="theme-color" content="#9AD0EC"/>
+  <link rel="manifest" href="/site.webmanifest"/>
 
-  <title>Heba ElSherif Academy</title>
-
-  <meta name="description" content="Heba ElSherif Academy منصة تعليمية عربية تقدم كورسات وكتب باحترافية." />
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="icon" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Heba ElSherif Academy", "url": "https://www.hebaelsherifacademy.com/", "sameAs": []}</script>
 </head>
-
-<body class="bg">
-  <!-- محتوى الصفحة -->
-</body>
-</html>
 <body class="bg">
 
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="index.html">
-         <img class="logo-img" src="logo.jpg" alt="Heba ElSherif Academy Logo">
+        <div class="logo"></div>
         <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
       </a>
       <nav class="menu">
-        <a class="" href="courses.html">الكورسات</a>
-        <a class="" href="books.html">الكتب</a>
-        <a class="" href="webinars.html">الويبينار</a>
-        <a class="" href="blog.html">المدونة</a>
+        <a class="" href="booking.html">حجز جلسة</a>
+        <a class="" href="courses.html">الكورسات (قريباً)</a>
+        <a class="" href="books.html">الكتب (قريباً)</a>
+        <a href="dashboard.html">حسابي</a>
+        <a href="admin.html">الإدارة</a>
         <a class="" href="contact.html">تواصل</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn small" href="cart.html">السلة <span class="cart-badge" id="cartCount">0</span></a>
         <span class="chip" id="userChip" style="display:none"></span>
         <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
         <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
@@ -44,39 +45,68 @@
 
   <section class="hero container">
     <div class="hero-text">
-      <span class="badge">منصة تعليمية عربية — كورسات وكتب وويبينار</span>
-      <h1>اتعلّم باحتراف<br /><span class="accent">من مكان واحد</span></h1>
-      <p>تجربة فاخرة وخفيفة وسريعة: بحث وفلترة، صفحات تفاصيل، وسلة مشتريات، وتسجيل دخول Firebase.</p>
+      <span class="badge">منصة تعليمية عربية — تحديثات مستمرة</span>
+      <h1>احجزي جلسة<br /><span class="accent">بسهولة واحتراف</span></h1>
+      <p>حجز جلسات مع اختيار اليوم والوقت (الجمعة إجازة). الكورسات والكتب ستكون متاحة قريباً.</p>
 
       <div class="actions">
-        <a href="courses.html" class="btn primary">تصفّح الكورسات</a>
-        <a href="books.html" class="btn">تصفّح الكتب</a>
+        <a href="booking.html" class="btn primary">احجز جلسة الآن</a>
+        <a href="courses.html" class="btn">الكورسات (قريباً)</a>
       </div>
 
       <div class="stats">
-        <div class="stat"><strong id="coursesCount">0</strong><span>كورس</span></div>
-        <div class="stat"><strong id="booksCount">0</strong><span>كتاب</span></div>
-        <div class="stat"><strong id="webinarsCount">0</strong><span>ويبينار</span></div>
+        <div class="stat"><strong id="coursesCount">0</strong><span>كورس (قريباً)</span></div>
+        <div class="stat"><strong id="booksCount">0</strong><span>كتاب (قريباً)</span></div>
       </div>
     </div>
 
     <div class="hero-card">
-      <h3>الأكثر شيوعًا</h3>
-      <p class="muted">سيظهر هنا منتج مميز تلقائيًا من ملف البيانات.</p>
-      <div id="featuredBox"></div>
+      <h3>أسعار الجلسات</h3>
+      <p class="muted">اختار مدة الجلسة ثم احجز.</p>
+      <div style="display:grid;gap:10px;margin-top:12px">
+        <div style="display:flex;justify-content:space-between;gap:10px"><span>جلسة ساعة</span><strong>1200 جنيه</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:10px"><span>جلسة ساعة ونصف</span><strong>1800 جنيه</strong></div>
+        <div class="hr"></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+          <span class="tag off">كود خصم</span>
+          <span class="muted">HEBA1000 للساعة • HEBA1500 للـ 90 دقيقة</span>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <a class="btn dark" href="booking.html">اذهب لصفحة الحجز</a>
     </div>
   </section>
 
   <section class="container section">
     <div class="section-head">
-      <h2>روابط سريعة</h2>
-      <p class="muted">تصفح الأقسام الأساسية بسهولة.</p>
+      <h2>ماذا ستجد في الموقع؟</h2>
+      <p class="muted">حاليًا: حجز جلسات. قريبًا: كورسات وكتب.</p>
     </div>
+
     <div class="grid">
-      <a class="card card-link" href="courses.html"><h3>الكورسات</h3><p>بحث + فلترة + صفحات تفاصيل.</p></a>
-      <a class="card card-link" href="books.html"><h3>الكتب</h3><p>كتب رقمية منظمة وعرض فاخر.</p></a>
-      <a class="card card-link" href="webinars.html"><h3>الويبينار</h3><p>مواعيد + زر تسجيل سريع.</p></a>
-      <a class="card card-link" href="blog.html"><h3>المدونة</h3><p>مقالات تساعدك على الاختيار والتعلم.</p></a>
+      <a class="card card-link" href="booking.html">
+        <h3>حجز جلسة</h3>
+        <p>اختيار يوم ووقت + إرسال الطلب عبر Firebase (Firestore).</p>
+        <div class="row"><span class="tag">تأكيد سريع</span><span class="tag">الجمعة إجازة</span></div>
+      </a>
+
+      <a class="card card-link" href="courses.html">
+        <h3>الكورسات (قريباً)</h3>
+        <p>قائمة كورسات مع بحث وفلترة — سيتم تفعيل الشراء لاحقًا.</p>
+        <div class="row"><span class="tag soon">Coming Soon</span></div>
+      </a>
+
+      <a class="card card-link" href="books.html">
+        <h3>الكتب (قريباً)</h3>
+        <p>كتب رقمية منظمة — سيتم تفعيلها قريبًا.</p>
+        <div class="row"><span class="tag soon">Coming Soon</span></div>
+      </a>
+
+      <a class="card card-link" href="contact.html">
+        <h3>تواصل</h3>
+        <p>واتساب + نموذج تواصل.</p>
+        <div class="row"><span class="tag">Support</span></div>
+      </a>
     </div>
   </section>
 
@@ -85,11 +115,10 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة •
-        <a href="privacy.html">الخصوصية</a> •
-        <a href="terms.html">الشروط</a> •
-        <a href="refund.html">الاسترجاع</a>
-      </p>
+      <span>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</span>
+      <span>•</span><a href="privacy.html">الخصوصية</a>
+      <span>•</span><a href="terms.html">الشروط</a>
+      <span>•</span><a href="refund.html">الاسترجاع</a>
     </div>
   </footer>
 

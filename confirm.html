@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>404 | Heba ElSherif</title>
+  <title>Confirm | Heba ElSherif</title>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#7c3aed" />
@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 <script type="module" src="/assets/js/app.js"></script>
 
-  <meta name="description" content="Not found"/>
+  <meta name="description" content="تأكيد طلب الحجز وإضافة للكاليندر."/>
 </head>
-<body >
+<body data-require-auth="true" data-page="confirm">
   <div class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/"><div class="logo" aria-hidden="true"></div>
@@ -40,10 +40,17 @@
   <div class="container">
     
   <div class="card">
-    <div class="section-title">404</div>
-    <div class="muted">هذه الصفحة غير موجودة.</div>
+    <div class="section-title" data-i18n="confirmTitle"></div>
+    <div class="muted" data-i18n="confirmText"></div>
     <div class="hr"></div>
-    <a class="btn primary" href="/">العودة للرئيسية</a>
+
+    <div id="box"></div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <button class="btn" id="btnICS" type="button" data-i18n="addCalendar"></button>
+      <button class="btn primary" id="btnWA" type="button" data-i18n="whatsapp"></button>
+      <a class="btn" href="/profile.html" data-i18n="myAccount"></a>
+    </div>
   </div>
 
     <div class="footer">

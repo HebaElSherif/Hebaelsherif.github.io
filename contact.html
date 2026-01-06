@@ -1,99 +1,82 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
+  <title>Contact | Heba ElSherif</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تواصل | Heba ElSherif Academy</title>
-  <meta name="description" content="تواصل معنا عبر واتساب أو نموذج التواصل." />
-  <link rel="canonical" href="https://www.hebaelsherifacademy.com/contact.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="تواصل | Heba ElSherif Academy"/>
-  <meta property="og:description" content="تواصل معنا عبر واتساب أو نموذج التواصل."/>
-  <meta property="og:url" content="https://www.hebaelsherifacademy.com/contact.html"/>
-  <meta property="og:site_name" content="Heba ElSherif Academy"/>
-  <meta name="theme-color" content="#9AD0EC"/>
-  <link rel="manifest" href="/site.webmanifest"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<script type="module" src="/assets/js/app.js"></script>
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Heba ElSherif Academy", "url": "https://www.hebaelsherifacademy.com/", "sameAs": []}</script>
+  <meta name="description" content="تواصل مع Heba ElSherif."/>
 </head>
-<body class="bg">
-
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="logo"></div>
-        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+<body data-page="contact">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><div class="logo" aria-hidden="true"></div>
+        <div class="title"><span>Heba ElSherif</span><span>هبة الشريف</span></div>
       </a>
-      <nav class="menu">
-        <a class="" href="booking.html">حجز جلسة</a>
-        <a class="" href="courses.html">الكورسات (قريباً)</a>
-        <a class="" href="books.html">الكتب (قريباً)</a>
-        <a href="dashboard.html">حسابي</a>
-        <a href="admin.html">الإدارة</a>
-        <a class="active" href="contact.html">تواصل</a>
-      </nav>
-      <div class="nav-actions">
-        <span class="chip" id="userChip" style="display:none"></span>
-        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
-        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      <div class="nav-links">
+        <a class="pill ghost" href="/booking.html" data-i18n="bookNow"></a>
+        <a class="pill ghost" href="/profile.html" data-i18n="myAccount"></a>
+        <a class="pill ghost" id="navAdmin" href="/admin.html" data-i18n="admin" style="display:none"></a>
+        <a class="pill ghost" href="/courses.html" data-i18n="coursesTitle"></a>
+        <a class="pill ghost" href="/books.html" data-i18n="booksTitle"></a>
+        <a class="pill ghost" href="/contact.html" data-i18n="contact"></a>
+        <span class="lang-toggle">
+          <span class="chip" id="langAr" data-lang="ar">AR</span>
+          <span class="chip" id="langEn" data-lang="en">EN</span>
+        </span>
+        <span class="pill small" id="navUser" style="display:none"></span>
+        <button class="pill primary" id="navAuth" type="button" data-i18n="login"></button>
       </div>
     </div>
-  </header>
+  </div>
 
-
-  <main class="container section">
-    <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:start">
-      <div class="card">
-        <h1 class="h1">تواصل معنا</h1>
-        <p class="muted">أرسل رسالة وسنرد عليك في أقرب وقت.</p>
-
-        <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-          <label>الاسم</label>
-          <input class="input" name="name" required />
-
-          <label>الإيميل</label>
-          <input class="input" type="email" name="email" required />
-
-          <label>الرسالة</label>
-          <textarea class="input" name="message" rows="5" required></textarea>
-
-          <button class="btn primary" type="submit">إرسال</button>
-          <p class="help" style="margin-top:10px">* استبدل YOUR_FORMSPREE_ID أو استخدم واتساب فقط.</p>
-        </form>
+  <div class="container">
+    
+  <div class="grid two">
+    <div class="card">
+      <div class="section-title" data-i18n="contact"></div>
+      <div class="row">
+        <input class="input" id="cname" placeholder="الاسم / Name" />
+        <input class="input" id="cemail" placeholder="Email" />
+        <textarea class="input" id="cmsg" placeholder="اكتبي رسالتك..."></textarea>
+        <button class="btn primary full" id="btnSend" type="button">Email</button>
+        <button class="btn full" id="btnWA2" type="button">WhatsApp</button>
       </div>
-
-      <div class="card">
-        <h3>واتساب</h3>
-        <p class="muted">تواصل سريع عبر واتساب.</p>
-        <a class="btn dark" id="waBtn" href="#" target="_blank" rel="noopener">فتح واتساب</a>
-
+      <div class="muted small" style="margin-top:10px">
+        * غيّري الإيميل في ملف contact.js إذا رغبتِ.
+      </div>
+    </div>
+    <div class="card soft">
+      <div class="section-title">Info</div>
+      <div class="muted">
+        <div><b>Online only</b></div>
+        <div class="small muted">6:00 AM → 9:00 PM (Cairo)</div>
         <div class="hr"></div>
-        <h3>روابط مهمة</h3>
-        <div class="row">
-          <a class="btn" href="privacy.html">الخصوصية</a>
-          <a class="btn" href="terms.html">الشروط</a>
-          <a class="btn" href="refund.html">الاسترجاع</a>
+        <div class="small muted">Use “Book a session” to pick a slot. Payment is deferred for now.</div>
+      </div>
+    </div>
+  </div>
+
+    <div class="footer">
+      <div class="hr"></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div data-i18n="footer"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="/privacy.html" data-i18n="privacy"></a>
+          <a href="/terms.html" data-i18n="terms"></a>
+          <a href="/refund.html" data-i18n="refund"></a>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
-  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
-
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</span>
-      <span>•</span><a href="privacy.html">الخصوصية</a>
-      <span>•</span><a href="terms.html">الشروط</a>
-      <span>•</span><a href="refund.html">الاسترجاع</a>
-    </div>
-  </footer>
-
-
-  <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <div class="toast" id="toast"></div>
 </body>
 </html>

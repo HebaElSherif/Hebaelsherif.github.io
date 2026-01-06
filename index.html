@@ -1,269 +1,186 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
+  <title>Heba ElSherif | هبة الشريف</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heba ElSherif Academy | حجز جلسات + كورسات وكتب قريباً</title>
-  <meta name="description" content="Heba ElSherif Academy — احجز جلسة تدريب/استشارة. الكورسات والكتب قريباً." />
-  <link rel="canonical" href="https://www.hebaelsherifacademy.com/"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Heba ElSherif Academy | حجز جلسات + كورسات وكتب قريباً"/>
-  <meta property="og:description" content="Heba ElSherif Academy — احجز جلسة تدريب/استشارة. الكورسات والكتب قريباً."/>
-  <meta property="og:url" content="https://www.hebaelsherifacademy.com/"/>
-  <meta property="og:site_name" content="Heba ElSherif Academy"/>
-  <meta name="theme-color" content="#9AD0EC"/>
-  <link rel="manifest" href="/site.webmanifest"/>
-
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Heba ElSherif Academy", "url": "https://www.hebaelsherifacademy.com/", "sameAs": []}</script>
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script type="module" src="/assets/js/app.js"></script>
+  <meta name="description" content="جلسات كوتشينج 1:1 عبر مكالمة هاتفية — احجزي موعدك بسهولة."/>
 </head>
-<body class="bg">
 
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="logo"></div>
-        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
-      </a>
-      <nav class="menu">
-        <a class="" href="booking.html">حجز جلسة</a>
-        <a class="" href="courses.html">الكورسات (قريباً)</a>
-        <a class="" href="books.html">الكتب (قريباً)</a>
-        <a href="dashboard.html">حسابي</a>
-        <a href="admin.html">الإدارة</a>
-        <a class="" href="contact.html">تواصل</a>
-      </nav>
-      <div class="nav-actions">
-        <span class="chip" id="userChip" style="display:none"></span>
-        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
-        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+<body data-page="home">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+  <div class="logo" aria-hidden="true"></div>
+  <div class="title">
+    <span>Heba ElSherif</span>
+    <span>هبة الشريف</span>
+  </div>
+</a>
+
+      <div class="nav-links">
+        <a class="pill ghost" href="/booking.html" data-i18n="bookNow"></a>
+        <a class="pill ghost" href="/profile.html" data-i18n="myAccount"></a>
+
+        <!-- ✅ تم إزالة: courses / books / admin من الهيدر -->
+
+        <a class="pill ghost" href="/contact.html" data-i18n="contact"></a>
+
+        <span class="lang-toggle">
+          <span class="chip" id="langAr" data-lang="ar">AR</span>
+          <span class="chip" id="langEn" data-lang="en">EN</span>
+        </span>
+
+        <span class="pill small" id="navUser" style="display:none"></span>
+        <button class="pill primary" id="navAuth" type="button" data-i18n="login"></button>
+
       </div>
     </div>
-  </header>
+  </div>
 
+  <div class="container">
 
-   <section class="container hero2">
-    <div>
-      <span class="kicker">Heba ElSherif Academy</span>
-      <h1 class="headline">تطوير مهاراتك… بخطة واضحة ونتائج ملموسة</h1>
-      <p class="lead">
-        منصة عربية تقدم جلسات تدريب/استشارة 1:1 لمساعدتك على الوصول لهدفك بخطوات عملية —
-        مع كورسات وكتب قادمة قريبًا.
-      </p>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1 class="h1" data-i18n="homeHeroTitle"></h1>
+          <p class="lead" data-i18n="homeHeroText"></p>
 
-      <div class="pills">
-        <span class="pill">جلسات 1:1</span>
-        <span class="pill">خطة عمل</span>
-        <span class="pill">متابعة وتقييم</span>
-        <span class="pill">محتوى عربي احترافي</span>
-      </div>
+          <div class="badges" id="badges"></div>
 
-      <div class="actions">
-        <a href="booking.html" class="btn primary">احجز جلسة</a>
-        <a href="dashboard.html" class="btn">حسابي</a>
-        <a href="#about" class="btn dark">اعرفي عني</a>
-      </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <a class="btn primary" href="/booking.html" data-i18n="bookNow"></a>
+            <a class="btn" href="/contact.html" data-i18n="contact"></a>
+          </div>
 
-      <div class="stats">
-        <div class="stat"><strong>+1</strong><span>سنوات خبرة</span></div>
-        <div class="stat"><strong>1:1</strong><span>جلسات فردية</span></div>
-        <div class="stat"><strong id="coursesCount">0</strong><span>كورس (قريباً)</span></div>
-      </div>
-    </div>
-
-    <div class="media-card">
-      <div class="row" style="align-items:center;justify-content:space-between">
-        <div class="row" style="align-items:center;gap:14px">
-          <img class="avatar" src="assets/images/hero-profile.png" alt="Heba ElSherif" onerror="this.style.display='none'" />
-          <div>
-            <strong style="font-size:16px">Heba ElSherif</strong>
-            <div class="muted" style="font-weight:900;font-size:12px">Coach • Educator</div>
+          <div class="kpis">
+            <div class="kpi"><b>6am : 9pm</b><span data-i18n="kpi1"></span></div>
+            <div class="kpi"><b>2</b><span data-i18n="kpi2"></span></div>
+            <div class="kpi"><b>Friday Off</b><span data-i18n="kpi3"></span></div>
           </div>
         </div>
-        <span class="tag off">حجز سريع</span>
-      </div>
 
-      <div class="list">
-        <div class="item"><span class="dot"></span><div><div class="quote">جلسة ساعة: 1200 جنيه</div><div class="muted">مناسبة لتشخيص وتحديد خطة واضحة.</div></div></div>
-        <div class="item"><span class="dot"></span><div><div class="quote">جلسة 90 دقيقة: 1800 جنيه</div><div class="muted">مناسبة للتطبيق العملي والمتابعة.</div></div></div>
-        <div class="item"><span class="dot"></span><div><div class="quote">أكواد الخصم</div><div class="muted">HEBA1000 للساعة • HEBA1500 للـ 90 دقيقة</div></div></div>
-      </div>
+        <!-- SERVICES / PRICING / FAQ -->
+        <div class="card soft">
+          <div class="section-title" data-i18n="servicesTitle"></div>
 
+          <div class="row">
+            <div class="card">
+              <b data-i18n="service1Title"></b>
+              <div class="muted small" data-i18n="service1Text"></div>
+              <div class="hr"></div>
+              <div class="small muted">1200 EGP</div>
+            </div>
+
+            <div class="card">
+              <b data-i18n="service2Title"></b>
+              <div class="muted small" data-i18n="service2Text"></div>
+              <div class="hr"></div>
+              <div class="small muted">1800 EGP</div>
+            </div>
+
+            <div class="card">
+              <div class="section-title" data-i18n="faqTitle"></div>
+              <div class="row">
+                <div><b data-i18n="q1"></b><div class="muted small" data-i18n="a1"></div></div>
+                <div><b data-i18n="q2"></b><div class="muted small" data-i18n="a2"></div></div>
+                <div><b data-i18n="q3"></b><div class="muted small" data-i18n="a3"></div></div>
+              </div>
+              <div class="hr"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+                <b data-i18n="ready"></b>
+                <a class="btn primary" href="/booking.html" data-i18n="bookNow"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ABOUT (New) -->
+    <div class="card soft" style="margin-top:16px">
+      <div class="section-title">عن هبة الشريف</div>
+      <div class="row">
+        <div class="card">
+          <b>أنا بقدّم إيه؟</b>
+          <div class="muted small">جلسات 1:1 بخطة واضحة وخطوات عملية تساعدك توصلي لهدفك.</div>
+          <div class="hr"></div>
+          <div class="muted small">تقييم • خطة • متابعة</div>
+        </div>
+
+        <div class="card">
+          <b>لمن الجلسات؟</b>
+          <div class="muted small">لو محتاجة ترتيب أولوياتك وتحويل هدفك لخطوات قابلة للتنفيذ.</div>
+          <div class="hr"></div>
+          <div class="muted small">وضوح • تنظيم • نتائج</div>
+        </div>
+
+        <div class="card">
+          <b>ابدئي الآن</b>
+          <div class="muted small">اختاري مدة الجلسة وحددي اليوم والوقت وسيتم تأكيد الموعد.</div>
+          <div class="hr"></div>
+          <a class="btn primary" href="/booking.html">احجزي الآن</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS (New) -->
+    <div class="card soft" style="margin-top:16px">
+      <div class="section-title">آراء وتجارب</div>
+      <div class="row">
+        <div class="card">
+          <div class="muted small">“الجلسة كانت منظمة جدًا وخرجت بخطوات واضحة.”</div>
+          <div class="hr"></div>
+          <b class="small">— عميلة</b>
+        </div>
+        <div class="card">
+          <div class="muted small">“أفضل حاجة: المتابعة والتقييم بطريقة بسيطة.”</div>
+          <div class="hr"></div>
+          <b class="small">— عميلة</b>
+        </div>
+        <div class="card">
+          <div class="muted small">“حسّيت بتقدم حقيقي من أول أسبوع.”</div>
+          <div class="hr"></div>
+          <b class="small">— عميلة</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
       <div class="hr"></div>
-      <div class="row" style="justify-content:space-between;align-items:center">
-        <span class="muted" style="font-weight:900">الجمعة إجازة</span>
-        <a class="btn dark" href="booking.html">اختيار الموعد</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="container section" id="about">
-    <div class="section-head">
-      <h2>مين Heba؟</h2>
-      <p class="muted">قدّمي نفسك هنا بشكل مختصر. (أنا حطيت نص مؤقت تقدر تعدّله بسهولة)</p>
-    </div>
-
-    <div class="grid" style="grid-template-columns: 1.1fr .9fr; align-items:start">
-      <div class="card">
-        <h3>نبذة سريعة</h3>
-        <p class="muted">
-          أنا Heba ElSherif — بساعد البنات والسيدات على تطوير مهاراتهم والوصول لنتائج واضحة من خلال جلسات فردية
-          وخطة عملية قابلة للتنفيذ. هدفي إنك تخرجي من الجلسة بخطوات واضحة ومقاييس متابعة.
-        </p>
-        <div class="hr"></div>
-        <div class="row">
-          <span class="tag">1:1 Coaching</span>
-          <span class="tag">Mentorship</span>
-          <span class="tag">Roadmap</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>كيف أقدر أساعدك؟</h3>
-        <p class="muted">اختاري أقرب هدف ليكي:</p>
-        <div class="list">
-          <div class="item"><span class="dot"></span><div><strong>تقييم الوضع الحالي</strong><div class="muted">تشخيص سريع + ترتيب الأولويات.</div></div></div>
-          <div class="item"><span class="dot"></span><div><strong>خطة تنفيذ</strong><div class="muted">خطوات أسبوعية قابلة للقياس.</div></div></div>
-          <div class="item"><span class="dot"></span><div><strong>متابعة</strong><div class="muted">مراجعة التقدم وتصحيح المسار.</div></div></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div data-i18n="footer"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="/privacy.html" data-i18n="privacy"></a>
+          <a href="/terms.html" data-i18n="terms"></a>
+          <a href="/refund.html" data-i18n="refund"></a>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="container section" id="services">
-    <div class="section-head">
-      <h2>الخدمات</h2>
-      <p class="muted">دلوقتي: حجز جلسات. قريبًا: كورسات وكتب.</p>
-    </div>
+  </div>
 
-    <div class="grid">
-      <a class="card card-link" href="booking.html">
-        <h3>حجز جلسة 1:1</h3>
-        <p>اختاري اليوم والوقت وسيتم حفظ طلبك على Firebase.</p>
-        <div class="row"><span class="tag">Scheduling</span><span class="tag">Firebase</span><span class="tag">Confirm</span></div>
-      </a>
+  <!-- WhatsApp Floating -->
+  <a class="wa-fab" 
+   href="https://wa.me/201000000000?text=Hello%20Heba%20I%20want%20to%20book"
+   target="_blank" 
+   rel="noopener"
+   aria-label="WhatsApp">
+  <svg viewBox="-1 1 34 32" width="34" height="38" fill="white" aria-hidden="true">
+    <path d="M19.11 17.36c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.13.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.04 2.8c-7.28 0-13.2 5.91-13.2 13.2 0 2.33.61 4.6 1.78 6.6L2.6 29.2l6.78-1.78c1.93 1.05 4.11 1.6 6.66 1.6 7.28 0 13.2-5.91 13.2-13.2S23.32 2.8 16.04 2.8zm0 23.6c-2.15 0-4.26-.58-6.1-1.68l-.44-.26-4.02 1.06 1.07-3.91-.29-.45c-1.12-1.83-1.71-3.93-1.71-6.07 0-6.43 5.23-11.66 11.66-11.66 6.43 0 11.66 5.23 11.66 11.66 0 6.43-5.23 11.66-11.66 11.66z"/>
+  </svg>
+</a>
 
-      <a class="card card-link" href="courses.html">
-        <h3>كورسات (Coming Soon)</h3>
-        <p>قائمة كورسات مع بحث وفلترة — تفعيل الشراء لاحقًا.</p>
-        <div class="row"><span class="tag soon">Coming Soon</span></div>
-      </a>
-
-      <a class="card card-link" href="books.html">
-        <h3>كتب رقمية (Coming Soon)</h3>
-        <p>كتب منظمة — سيتم تفعيلها قريبًا.</p>
-        <div class="row"><span class="tag soon">Coming Soon</span></div>
-      </a>
-
-      <a class="card card-link" href="dashboard.html">
-        <h3>حسابك والتقدم</h3>
-        <p>تابعي حجوزاتك وتقدّمك في الكورسات داخل لوحة حسابك.</p>
-        <div class="row"><span class="tag">Dashboard</span><span class="tag">Progress</span></div>
-      </a>
-    </div>
-  </section>
-
-  <section class="container section" id="testimonials">
-    <div class="section-head">
-      <h2>آراء وتجارب</h2>
-      <p class="muted">نصوص تجريبية — استبدليها بتجارب حقيقية لاحقًا.</p>
-    </div>
-    <div class="testi grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-      <div class="card">
-        <p>“الجلسة كانت منظمة جدًا وخرجت بخطة واضحة.”</p>
-        <div class="muted" style="font-weight:900;margin-top:10px">— عميلة</div>
-      </div>
-      <div class="card">
-        <p>“أفضل حاجة إن المتابعة كانت بسيطة وواضحة.”</p>
-        <div class="muted" style="font-weight:900;margin-top:10px">— عميلة</div>
-      </div>
-      <div class="card">
-        <p>“حسّيت إن في تقدم حقيقي من أول أسبوع.”</p>
-        <div class="muted" style="font-weight:900;margin-top:10px">— عميلة</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container section" id="faq">
-    <div class="section-head">
-      <h2>أسئلة شائعة</h2>
-      <p class="muted">إجابات مختصرة لأسئلة العملاء.</p>
-    </div>
-
-    <div class="faq">
-      <details>
-        <summary>إزاي بحجز؟</summary>
-        <div class="muted" style="margin-top:10px">ادخلي صفحة الحجز، اختاري اليوم والوقت، وسجّلي دخول قبل إرسال الطلب.</div>
-      </details>
-      <details>
-        <summary>هل في حجز يوم الجمعة؟</summary>
-        <div class="muted" style="margin-top:10px">لا، الجمعة إجازة — اختاري يوم آخر.</div>
-      </details>
-      <details>
-        <summary>إزاي أتابع تقدمي؟</summary>
-        <div class="muted" style="margin-top:10px">من صفحة “حسابي” تقدرِي تشوفي الحجوزات وتحددي نسبة التقدم لكل كورس.</div>
-      </details>
-    </div>
-
-    <div class="hr"></div>
-    <div class="row" style="justify-content:space-between;align-items:center">
-      <div>
-        <strong>جاهزة تبدأ؟</strong>
-        <div class="muted">احجزي جلسة وحددي هدفك.</div>
-      </div>
-      <a class="btn primary" href="booking.html">احجز الآن</a>
-    </div>
-  </section>
-
-
-  <section class="container section">
-    <div class="section-head">
-      <h2>ماذا ستجد في الموقع؟</h2>
-      <p class="muted">حاليًا: حجز جلسات. قريبًا: كورسات وكتب.</p>
-    </div>
-
-    <div class="grid">
-      <a class="card card-link" href="booking.html">
-        <h3>حجز جلسة</h3>
-        <p>اختيار يوم ووقت + إرسال الطلب عبر Firebase (Firestore).</p>
-        <div class="row"><span class="tag">تأكيد سريع</span><span class="tag">الجمعة إجازة</span></div>
-      </a>
-
-      <a class="card card-link" href="courses.html">
-        <h3>الكورسات (قريباً)</h3>
-        <p>قائمة كورسات مع بحث وفلترة — سيتم تفعيل الشراء لاحقًا.</p>
-        <div class="row"><span class="tag soon">Coming Soon</span></div>
-      </a>
-
-      <a class="card card-link" href="books.html">
-        <h3>الكتب (قريباً)</h3>
-        <p>كتب رقمية منظمة — سيتم تفعيلها قريبًا.</p>
-        <div class="row"><span class="tag soon">Coming Soon</span></div>
-      </a>
-
-      <a class="card card-link" href="contact.html">
-        <h3>تواصل</h3>
-        <p>واتساب + نموذج تواصل.</p>
-        <div class="row"><span class="tag">Support</span></div>
-      </a>
-    </div>
-  </section>
-
-  <a class="whatsapp-fab" id="waFab" href="#" target="_blank" rel="noopener">واتساب</a>
-
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Heba ElSherif Academy — جميع الحقوق محفوظة</span>
-      <span>•</span><a href="privacy.html">الخصوصية</a>
-      <span>•</span><a href="terms.html">الشروط</a>
-      <span>•</span><a href="refund.html">الاسترجاع</a>
-    </div>
-  </footer>
-
-
-  <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <div class="toast" id="toast"></div>
 </body>
 </html>

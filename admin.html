@@ -1,65 +1,59 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
+  <title>Admin | Heba ElSherif</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>لوحة الإدارة | Heba ElSherif Academy</title>
-  <meta name="description" content="لوحة إدارة الحجوزات (للأدمن فقط)." />
-  <meta name="robots" content="noindex,nofollow" />
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<script type="module" src="/assets/js/app.js"></script>
+
+  <meta name="description" content="لوحة الإدارة."/>
 </head>
-<body class="bg">
-
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="logo"></div>
-        <div><strong>Heba ElSherif</strong><div class="small">Academy</div></div>
+<body data-require-auth="true" data-page="admin">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><div class="logo" aria-hidden="true"></div>
+        <div class="title"><span>Heba ElSherif</span><span>هبة الشريف</span></div>
       </a>
-      <nav class="menu">
-        <a href="booking.html">حجز جلسة</a>
-        <a href="dashboard.html">حسابي</a>
-        <a href="admin.html" class="active">الإدارة</a>
-        <a href="contact.html">تواصل</a>
-      </nav>
-      <div class="nav-actions">
-        <span class="chip" id="userChip" style="display:none"></span>
-        <a href="login.html" class="btn small" id="loginLink">تسجيل الدخول</a>
-        <button class="btn small dark" id="logoutBtn" style="display:none">خروج</button>
+      <div class="nav-links">
+        <a class="pill ghost" href="/booking.html" data-i18n="bookNow"></a>
+        <a class="pill ghost" href="/profile.html" data-i18n="myAccount"></a>
+        <a class="pill ghost" id="navAdmin" href="/admin.html" data-i18n="admin" style="display:none"></a>
+        <a class="pill ghost" href="/courses.html" data-i18n="coursesTitle"></a>
+        <a class="pill ghost" href="/books.html" data-i18n="booksTitle"></a>
+        <a class="pill ghost" href="/contact.html" data-i18n="contact"></a>
+        <span class="lang-toggle">
+          <span class="chip" id="langAr" data-lang="ar">AR</span>
+          <span class="chip" id="langEn" data-lang="en">EN</span>
+        </span>
+        <span class="pill small" id="navUser" style="display:none"></span>
+        <button class="pill primary" id="navAuth" type="button" data-i18n="login"></button>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main class="container section">
-    <div class="section-head">
-      <h1 class="h1">لوحة الإدارة</h1>
-      <p class="muted">عرض وإدارة الحجوزات (تأكيد/إلغاء). هذه الصفحة للأدمن فقط.</p>
-    </div>
+  <div class="container">
+    
+  <div id="adminBox"></div>
 
-    <div id="gate" class="card" style="border-style:dashed">
-      <p class="muted">جاري التحقق من صلاحيات الأدمن...</p>
-    </div>
-
-    <div id="adminUI" style="display:none">
-      <div class="toolbar" style="grid-template-columns:1fr 1fr 1fr">
-        <select id="statusFilter" class="input">
-          <option value="">كل الحالات</option>
-          <option value="pending">pending</option>
-          <option value="confirmed">confirmed</option>
-          <option value="cancelled">cancelled</option>
-        </select>
-        <input id="dateFilter" class="input" type="date" />
-        <input id="q" class="input" placeholder="بحث بالاسم/الهاتف/الإيميل..." />
+    <div class="footer">
+      <div class="hr"></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div data-i18n="footer"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="/privacy.html" data-i18n="privacy"></a>
+          <a href="/terms.html" data-i18n="terms"></a>
+          <a href="/refund.html" data-i18n="refund"></a>
+        </div>
       </div>
-
-      <div id="list" class="grid"></div>
-      <p id="msg" class="msg"></p>
     </div>
-  </main>
+  </div>
 
-  <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/admin.js"></script>
+  <div class="toast" id="toast"></div>
 </body>
 </html>

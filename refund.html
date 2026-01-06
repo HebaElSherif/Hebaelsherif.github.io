@@ -1,25 +1,65 @@
-<!doctype html><html lang="ar" dir="rtl"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>سياسة الاسترجاع | Heba ElSherif Academy</title>
-<meta name="description" content="سياسة الاسترجاع لموقع Heba ElSherif Academy."/>
-  <link rel="canonical" href="https://www.hebaelsherifacademy.com/refund.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="سياسة الاسترجاع | Heba ElSherif Academy"/>
-  <meta property="og:description" content="سياسة الاسترجاع لموقع Heba ElSherif Academy."/>
-  <meta property="og:url" content="https://www.hebaelsherifacademy.com/refund.html"/>
-  <meta property="og:site_name" content="Heba ElSherif Academy"/>
-  <meta name="theme-color" content="#9AD0EC"/>
-  <link rel="manifest" href="/site.webmanifest"/>
+<!doctype html>
+<html>
+<head>
+  <title>Refund | Heba ElSherif</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<script type="module" src="/assets/js/app.js"></script>
 
-<link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="css/style.css"/></head>
-<body class="bg">
-<header class="topbar"><div class="container nav">
-<a class="brand" href="index.html"><div class="logo"></div><div><strong>Heba ElSherif</strong><div class="small">Academy</div></div></a>
-</div></header>
-<main class="container section"><div class="card">
-<h1 class="h1">سياسة الاسترجاع</h1>
-<p class="muted">بالنسبة للجلسات: يمكن تغيير الموعد بالتواصل قبلها بوقت كافٍ. للتفاصيل تواصل معنا.</p>
-</div></main>
-<footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Heba ElSherif Academy</span></div></footer>
-<script type="module" src="js/firebase.js"></script><script type="module" src="js/main.js"></script>
-</body></html>
+  <meta name="description" content="سياسة الاسترجاع."/>
+</head>
+<body >
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><div class="logo" aria-hidden="true"></div>
+        <div class="title"><span>Heba ElSherif</span><span>هبة الشريف</span></div>
+      </a>
+      <div class="nav-links">
+        <a class="pill ghost" href="/booking.html" data-i18n="bookNow"></a>
+        <a class="pill ghost" href="/profile.html" data-i18n="myAccount"></a>
+        <a class="pill ghost" id="navAdmin" href="/admin.html" data-i18n="admin" style="display:none"></a>
+        <a class="pill ghost" href="/courses.html" data-i18n="coursesTitle"></a>
+        <a class="pill ghost" href="/books.html" data-i18n="booksTitle"></a>
+        <a class="pill ghost" href="/contact.html" data-i18n="contact"></a>
+        <span class="lang-toggle">
+          <span class="chip" id="langAr" data-lang="ar">AR</span>
+          <span class="chip" id="langEn" data-lang="en">EN</span>
+        </span>
+        <span class="pill small" id="navUser" style="display:none"></span>
+        <button class="pill primary" id="navAuth" type="button" data-i18n="login"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+  <div class="card">
+    <div class="section-title">الاسترجاع | Refund</div>
+    <div class="muted">
+      <p>حاليًا الدفع مؤجّل. عند تفعيل الدفع سيتم إضافة سياسة الاسترجاع بوضوح هنا.</p>
+      <p>Payment is currently deferred. Once online payments are enabled, refund policy will be published here.</p>
+    </div>
+  </div>
+
+    <div class="footer">
+      <div class="hr"></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div data-i18n="footer"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="/privacy.html" data-i18n="privacy"></a>
+          <a href="/terms.html" data-i18n="terms"></a>
+          <a href="/refund.html" data-i18n="refund"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</body>
+</html>

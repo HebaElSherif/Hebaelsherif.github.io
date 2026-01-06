@@ -1,44 +1,86 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
+  <title>Login | Heba ElSherif</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تسجيل الدخول | Heba ElSherif Academy</title>
-  <meta name="description" content="تسجيل الدخول وإنشاء حساب (Firebase Auth)." />
-  <meta name="robots" content="noindex,nofollow" />
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Heba ElSherif Academy", "url": "https://www.hebaelsherifacademy.com/", "sameAs": []}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<script type="module" src="/assets/js/app.js"></script>
+
+  <meta name="description" content="تسجيل الدخول لحجز جلسة كوتشينج."/>
 </head>
-<body class="bg">
-  <main class="auth-card">
-    <div class="auth-head">
-      <div class="logo"></div>
-      <div>
-        <h1 class="h1" style="margin:0">تسجيل الدخول</h1>
-        <p class="muted" style="margin:6px 0 0">Email/Password (Firebase)</p>
+<body data-page="login">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><div class="logo" aria-hidden="true"></div>
+        <div class="title"><span>Heba ElSherif</span><span>هبة الشريف</span></div>
+      </a>
+      <div class="nav-links">
+        <a class="pill ghost" href="/booking.html" data-i18n="bookNow"></a>
+        <a class="pill ghost" href="/profile.html" data-i18n="myAccount"></a>
+        <a class="pill ghost" id="navAdmin" href="/admin.html" data-i18n="admin" style="display:none"></a>
+        <a class="pill ghost" href="/courses.html" data-i18n="coursesTitle"></a>
+        <a class="pill ghost" href="/books.html" data-i18n="booksTitle"></a>
+        <a class="pill ghost" href="/contact.html" data-i18n="contact"></a>
+        <span class="lang-toggle">
+          <span class="chip" id="langAr" data-lang="ar">AR</span>
+          <span class="chip" id="langEn" data-lang="en">EN</span>
+        </span>
+        <span class="pill small" id="navUser" style="display:none"></span>
+        <button class="pill primary" id="navAuth" type="button" data-i18n="login"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+  <div class="grid two">
+    <div class="card">
+      <div class="section-title" data-i18n="login"></div>
+      <div class="row">
+        <input class="input" id="name" type="text" placeholder="الاسم / Name" />
+        <input class="input" id="email" type="email" data-i18n-placeholder="email" placeholder="Email" />
+        <input class="input" id="password" type="password" placeholder="Password" />
+        <button class="btn primary full" id="btnSignIn" type="button" data-i18n="signIn"></button>
+        <button class="btn full" id="btnSignUp" type="button" data-i18n="signUp"></button>
+        <button class="btn full" id="btnGoogle" type="button" data-i18n="continueGoogle"></button>
+        <button class="btn link" id="btnForgot" type="button" data-i18n="forgot"></button>
+      </div>
+      <div class="muted small" style="margin-top:10px">
+        ملاحظة: تأكدي من إضافة الدومين في Firebase Authorized domains.
       </div>
     </div>
 
-    <form id="loginForm" class="form">
-      <label>البريد الإلكتروني</label>
-      <input id="email" class="input" type="email" required placeholder="name@email.com" />
-
-      <label>كلمة المرور</label>
-      <input id="password" class="input" type="password" required placeholder="••••••••" />
-
-      <button class="btn primary" type="submit">دخول</button>
-
-      <div class="row">
-        <button class="btn" type="button" id="signupBtn">إنشاء حساب</button>
-        <a class="btn dark" href="index.html">الرئيسية</a>
+    <div class="card soft">
+      <div class="section-title">Why login?</div>
+      <div class="muted">
+        <ul>
+          <li>تأكيد الهوية وربط الحجز بحسابك.</li>
+          <li>تقدرِي تشوفي حجوزاتك وتطلبي تأجيل/إلغاء بسهولة.</li>
+          <li>جاهزية لمرحلة الدفع والكتب لاحقًا.</li>
+        </ul>
       </div>
+    </div>
+  </div>
 
-      <p id="msg" class="msg"></p>
-    </form>
-  </main>
+    <div class="footer">
+      <div class="hr"></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div data-i18n="footer"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="/privacy.html" data-i18n="privacy"></a>
+          <a href="/terms.html" data-i18n="terms"></a>
+          <a href="/refund.html" data-i18n="refund"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script type="module" src="js/firebase.js"></script>
-  <script type="module" src="js/auth.js"></script>
+  <div class="toast" id="toast"></div>
 </body>
 </html>

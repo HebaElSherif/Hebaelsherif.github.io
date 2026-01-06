@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": "course-1",
+      "type": "course",
+      "title": "كورس (قريباً) — أساسيات احترافية",
+      "description": "سيتم الإعلان عن محتوى الكورس قريباً.",
+      "category": "تجميل",
+      "level": "مبتدئ",
+      "comingSoon": true
+    },
+    {
+      "id": "course-2",
+      "type": "course",
+      "title": "كورس (قريباً) — مستوى متقدم",
+      "description": "قريباً…",
+      "category": "عناية",
+      "level": "متوسط",
+      "comingSoon": true
+    },
+    {
+      "id": "book-1",
+      "type": "book",
+      "title": "كتاب PDF (قريباً)",
+      "description": "كتاب رقمي سيتم نشره قريباً.",
+      "category": "كتب",
+      "comingSoon": true
+    }
+  ]
+}
